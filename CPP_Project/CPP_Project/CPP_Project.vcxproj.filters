@@ -15,7 +15,7 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Advance_Cpp\const_and_function.cpp">
+    <ClCompile Include="Advance_Cpp\Logic_Constness_and_Bitwise_Constness.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
