@@ -15,7 +15,7 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Advance_Cpp\const.cpp">
+    <ClCompile Include="Advance_Cpp\const_and_function.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
