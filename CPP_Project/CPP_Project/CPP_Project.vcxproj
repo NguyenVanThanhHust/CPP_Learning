@@ -19,7 +19,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Advance_Cpp\Logic_Constness_and_Bitwise_Constness.cpp" />
+    <ClCompile Include="Learning_CPP\Rvalue_Reference.cpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{0A2FE8A8-5104-476C-A319-28316C72D38A}</ProjectGuid>

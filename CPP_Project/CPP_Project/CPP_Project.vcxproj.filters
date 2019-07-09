@@ -15,7 +15,7 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Advance_Cpp\Logic_Constness_and_Bitwise_Constness.cpp">
+    <ClCompile Include="Learning_CPP\Rvalue_Reference.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
