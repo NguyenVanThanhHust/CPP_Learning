@@ -1,9 +1,7 @@
-﻿  Logic_Constness_and_Bitwise_Constness.cpp
-Advance_Cpp\Logic_Constness_and_Bitwise_Constness.cpp(32): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
-Advance_Cpp\Logic_Constness_and_Bitwise_Constness.cpp(44): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
+﻿  _8Queen.cpp
   Generating code
-  78 of 78 functions (100.0%) were compiled, the rest were copied from previous compilation.
-    53 functions were new in current compilation
+  2 of 10 functions (20.0%) were compiled, the rest were copied from previous compilation.
+    0 functions were new in current compilation
     0 functions had inline decision re-evaluated but remain unchanged
   Finished generating code
   CPP_Project.vcxproj -> D:\Projects\CPP_Learning\CPP_Project\x64\Release\CPP_Project.exe

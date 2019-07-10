@@ -15,7 +15,7 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Advance_Cpp\Understand_Rvalue_and_Lvalue.cpp">
+    <ClCompile Include="Algorithm_in_CPP\Greed_Fractional_Knapsack.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

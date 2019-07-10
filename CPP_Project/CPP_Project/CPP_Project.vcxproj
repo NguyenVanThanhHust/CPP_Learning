@@ -19,7 +19,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Advance_Cpp\Understand_Rvalue_and_Lvalue.cpp" />
+    <ClCompile Include="Algorithm_in_CPP\Greed_Fractional_Knapsack.cpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{0A2FE8A8-5104-476C-A319-28316C72D38A}</ProjectGuid>
