@@ -15,7 +15,7 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="UVa_10310_Dog_and_Gopher.cpp">
+    <ClCompile Include="Concurrent_Programming\Simple_Thread.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
