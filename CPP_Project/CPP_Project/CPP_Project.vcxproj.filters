@@ -15,7 +15,7 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Algorithm_in_CPP\Greed_Fractional_Knapsack.cpp">
+    <ClCompile Include="UVa_10310_Dog_and_Gopher.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
