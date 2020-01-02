@@ -4,5 +4,5 @@ export PSTL_ROOT=/home/thanhnv/Downloads/tbb-2020.0-lin/pstl
 
 source ${TBB_ROOT}/bin/tbbvars.sh intel64 linux auto_tbbroot
 source ${PSTL_ROOT}/bin/pstlvars.sh intel64 auto_pstlroot
-g++ -std=c++11 -o fig_1_05 fig_1_05.cpp -ltbb
+g++ -std=c++11 -o figure_1_05 figure_1_05.cpp -ltbb
 ./fig_1_05
