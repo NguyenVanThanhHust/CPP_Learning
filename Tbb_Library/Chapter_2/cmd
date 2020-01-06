@@ -1,0 +1,1 @@
+g++ -std=c++11 -O2 -o lambda_vs_class_1 lambda_vs_class_1.cpp -ltbb
