@@ -14,7 +14,7 @@ private:
     const std::string &myString;
 public:
     printClass(const std::string &s): myString{s} {};
-    void operator()(std::string s) const{
+    void operator()() const{
         print_function(myString);
     } 
 };
