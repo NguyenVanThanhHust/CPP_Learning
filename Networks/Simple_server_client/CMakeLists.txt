@@ -14,8 +14,3 @@ include_directories(network_sample
 
 link_directories(network_sample
 )
-
-# target_link_libraries(network_sample
-#   ${CUDA_LIBRARIES}
-#   /usr/local/cuda/lib64/libcudart.so
-# )
