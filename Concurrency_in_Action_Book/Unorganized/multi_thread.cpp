@@ -1,6 +1,7 @@
 #include <iostream>
 #include <string>
 #include <thread>
+#include <future>
 
 #ifdef _WIN32
 #include <Windows.h>
@@ -12,6 +13,10 @@ using std::cin;
 using std::cout;
 using std::endl;
 
+struct dec_res {
+    bool isFrame;
+    std::string cvMat; 
+}
 
 class decoder
 {
@@ -23,6 +28,7 @@ public:
     decoder(int some_id, std::string some_mess);
     ~decoder();
     void decode(std::string some_message);
+    dec_res decoder::decoder_v2(std::string& some_message);
 };
 
 decoder::decoder(int some_id, std::string some_mess)
@@ -36,23 +42,41 @@ decoder::~decoder()
 {
 }
 
-void decoder::decode(std::string some_message)
+void decoder::decode(std::string& some_message)
 {
-    for(int i=0; i<100; i++)
+    for(int i=0; i<10; i++)
     {
         cout<<"thread_id: "<<thread_id<<" index: "<<i<<" input message to function: "<<some_message<<" ori message init: "<<ip_addr<<endl;
         sleep(2);
     }
+    cout<<"Done"<<endl;
 }
+
+dec_res decoder::decoder_v2(std::string& some_message)
+{
+    for(int i=0; i<10; i++)
+    {
+        cout<<"thread_id: "<<thread_id<<" index: "<<i<<" input message to function: "<<some_message<<" ori message init: "<<ip_addr<<endl;
+        sleep(1);
+    }
+    dec_res res{true, ip_addr};
+    return res;
+}
+
 
 int main()
 {
     decoder *d1 = new decoder(1, "dec_1");
     decoder *d2 = new decoder(2, "dec_2");
-    std::thread t1(&decoder::decode, d1, "message_1");
-    std::thread t2(&decoder::decode, d2, "message_2");
-    t1.join();
-    t2.join();
+    
+    auto ret1 = std::async(&decoder::decoder_v2, d1, "message_1");
+    auto ret2 = std::async(&decoder::decoder_v2, d2, "message_2");
+    
+    dec_res v1 = ret1.get();
+    dec_res v2 = ret2.get();
+    cout<<"get result";
+    cout<<v1.cvMat<<endl;
+    cout<<v2.cvMat<<endl;
     return 0;
 }
 
