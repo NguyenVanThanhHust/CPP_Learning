@@ -13,30 +13,30 @@ using std::cout;
 using std::endl;
 
 
-class decoder
+class Decoder
 {
 private:
     /* data */
 public:
     int thread_id;
     std::string ip_addr;    
-    decoder(int some_id, std::string some_mess);
-    ~decoder();
+    Decoder(int some_id, std::string some_mess);
+    ~Decoder();
     void decode(std::string some_message);
 };
 
-decoder::decoder(int some_id, std::string some_mess)
+Decoder::Decoder(int some_id, std::string some_mess)
 {
     thread_id=some_id;
     ip_addr = some_mess; 
     cout<<"thread_id: "<<thread_id<<endl;
 }
 
-decoder::~decoder()
+Decoder::~Decoder()
 {
 }
 
-void decoder::decode(std::string some_message)
+void Decoder::decode(std::string some_message)
 {
     for(int i=0; i<100; i++)
     {
@@ -47,10 +47,10 @@ void decoder::decode(std::string some_message)
 
 int main()
 {
-    decoder *d1 = new decoder(1, "dec_1");
-    decoder *d2 = new decoder(2, "dec_2");
-    std::thread t1(&decoder::decode, d1, "message_1");
-    std::thread t2(&decoder::decode, d2, "message_2");
+    Decoder *d1 = new Decoder(1, "dec_1");
+    Decoder *d2 = new Decoder(2, "dec_2");
+    std::thread t1(&Decoder::decode, d1, "message_1");
+    std::thread t2(&Decoder::decode, d2, "message_2");
     t1.join();
     t2.join();
     return 0;

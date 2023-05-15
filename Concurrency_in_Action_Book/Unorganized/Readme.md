@@ -1,1 +1,1 @@
-This is what I learn from google, before finish the book
+This simulate a program that decode 2 video stream simultanously. Each thread decode a video stream, push it to queue. An other thread get data from queue to process it. 
