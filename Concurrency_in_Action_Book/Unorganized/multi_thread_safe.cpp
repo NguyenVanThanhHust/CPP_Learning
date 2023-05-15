@@ -63,11 +63,16 @@ public:
         // return item
         return item;
     }
+
+    int size()
+    {
+        // acquire lock
+        std::unique_lock<std::mutex> lock(m_mutex);
+        return m_queue.size();
+    }
 };
 
-// ThreadSafeQueue<std::string> dataQueue;
-std::queue<std::string> dataQueue;
-std::mutex q_mutex;
+ThreadSafeQueue<std::string> dataQueue;
 
 struct dec_res {
     bool isFrame;
@@ -100,13 +105,11 @@ void Processor::process(std::string randomMat)
 
     while (true)
     {
-        q_mutex.lock();
-        std::string outputMat = dataQueue.front();
-        dataQueue.pop();
-        cout<<"output: "<<outputMat<<endl;
-        q_mutex.unlock();
-        sleep(2);
-        if (dataQueue.empty())
+        std::string outputMat = dataQueue.pop();
+        outputMat = outputMat + "_process";
+        cout<<outputMat<<endl;
+        sleep(1);
+        if (dataQueue.size() == 0)
         {
             break;
         }
@@ -140,12 +143,9 @@ void Decoder::decode(std::string some_message)
 {
     for(int i=0; i<10; i++)
     {
-        q_mutex.lock();
         std::string outputMat = some_message;
         outputMat = outputMat + "_thread_id_" + std::to_string(thread_id) + "_id_" + std::to_string(i);
         dataQueue.push(outputMat);
-        q_mutex.unlock();
-        // cout<<"thread_id: "<<thread_id<<" index: "<<i<<" input message to function: "<<some_message<<" ori message init: "<<ip_addr<<endl;
         sleep(1);
     }
     cout<<"Done"<<endl;
@@ -166,7 +166,6 @@ int main(int argc, char *argv[])
     //     std::queue<std::string> qString;
     //     vQueue.push_back(qString);
     // }
-
 
     Decoder *d1 = new Decoder(1, "dec_1");
     Decoder *d2 = new Decoder(2, "dec_2");
