@@ -5,4 +5,4 @@ This is what I practice problems from [Modern C++ Challenge](https://www.amazon.
 
 | Status | Chapter | Content |
 |-----|--------|--------|
-| -[x] | Chapter 1: Math | Basic math excercises |
+| - [x] | Chapter 1: Math | Basic math excercises |
