@@ -5,3 +5,5 @@ project(network_sample LANGUAGES CXX)
 set(CMAKE_BUILD_TYPE Release)
 
 add_executable(problem_1 Problem_1.cpp)
+
+add_executable(problem_2 problem_2.cpp)

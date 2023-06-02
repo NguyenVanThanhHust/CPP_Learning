@@ -16,8 +16,9 @@ Problem 2:
 Find the greatest common divisor of two inputs
 
 Solution: 
-Naive:
+Denote: $GCD(x, y)$ = Greatest common divisor of $x$ and $y$
 
+Naive: We can see $GCD(x, y) = GCD(x-y, y)$. We can continue to subtract 
 More Optimized:
 
 Problem 3: Find the least common multiple of given positive integers.
