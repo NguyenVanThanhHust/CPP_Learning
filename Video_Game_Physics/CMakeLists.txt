@@ -9,6 +9,5 @@ add_definitions("-DENABLE_SSE")
 
 set(CMAKE_CXX_FLAGS "-std=c++17 -O3 -pthread -Wall -Ofast -Wfatal-errors -D_MWAITXINTRIN_H_INCLUDED")
 
-add_executable(${PROJECT_NAME}
-    src/main.cpp
-    )
+add_executable(particle_simulation src/particle_simulation.cpp)
+add_executable(rigid_body_simulation src/rigid_body_simulation.cpp)
